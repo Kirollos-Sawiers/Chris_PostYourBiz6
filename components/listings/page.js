@@ -2,7 +2,6 @@
 import NavBar from "../../components/navbar/page";
 import Footer from "../../components/footer/page";
 import Image from "next/image";
-// import list from "@/public/images/list.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faAddressBook } from "@fortawesome/free-regular-svg-icons";

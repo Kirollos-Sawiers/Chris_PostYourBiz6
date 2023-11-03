@@ -10,16 +10,16 @@ import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
-import { Carousel } from "tw-elements";
+// import { Carousel } from "tw-elements";
 import Link from "next/link";
 export default function ListDetails({ listDetails, similarData }) {
-  useEffect(() => {
-    const init = async () => {
-      const { initTE } = await import("tw-elements");
-      initTE({ Carousel });
-    };
-    init();
-  }, []);
+  // useEffect(() => {
+  //   const init = async () => {
+  //     const { initTE } = await import("tw-elements");
+  //     initTE({ Carousel });
+  //   };
+  //   init();
+  // }, []);
   console.log(similarData.data);
   const similarBusiness = similarData.data;
   const Card = () => {

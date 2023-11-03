@@ -10,15 +10,15 @@ import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
-import { Carousel } from "tw-elements";
+// import { Carousel } from "tw-elements";
 export default function PostDetails({ postDetails }) {
-  useEffect(() => {
-    const init = async () => {
-      const { initTE } = await import("tw-elements");
-      initTE({ Carousel });
-    };
-    init();
-  }, []);
+  // useEffect(() => {
+  //   const init = async () => {
+  //     const { initTE } = await import("tw-elements");
+  //     initTE({ Carousel });
+  //   };
+  //   init();
+  // }, []);
   console.log(postDetails);
   const Card = () => {
     return (

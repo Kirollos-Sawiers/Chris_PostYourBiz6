@@ -1,20 +1,19 @@
 "use client";
-
 import Image from "next/image";
 import cottagehome_icon from "@/public/images/cottagehome_icon.png";
 import Link from "next/link";
-import { Collapse } from "tw-elements";
+// import { Collapse } from "tw-elements";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 const NavBar = () => {
   const pathname = usePathname();
-  useEffect(() => {
-    const init = async () => {
-      const { initTE } = await import("tw-elements");
-      initTE({ Collapse });
-    };
-    init();
-  }, []);
+  // useEffect(() => {
+  //   const init = async () => {
+  //     const { initTE } = await import("tw-elements");
+  //     initTE({ Collapse });
+  //   };
+  //   init();
+  // }, []);
   return (
     <>
       {/* <!-- Main navigation container --> */}

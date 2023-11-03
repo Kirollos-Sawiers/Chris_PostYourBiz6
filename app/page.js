@@ -8,7 +8,7 @@ import Terms from "./termsandconditions/page";
 import ListView from "./listing/page";
 import GridView from "./posting/page";
 import MapView from "./map/page";
-import Details from "./details/page";
+
 
 export default function App() {
   return (

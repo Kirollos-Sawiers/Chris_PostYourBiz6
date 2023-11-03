@@ -1,4 +1,4 @@
-import getPost from "../../../../lib/getPost";
+import getPost from "../../../lib/getPost";
 import PostDetails from "@/components/postDetails/page";
 
 export default async function PostingDetails({ params: { id } }) {

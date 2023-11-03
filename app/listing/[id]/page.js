@@ -1,5 +1,5 @@
-import getBusinesses from "../../../../lib/getBusiness";
-import getSimilarBusinesses from "../../../../lib/getSimillarBusineses";
+import getBusinesses from "@/lib/getBusiness";
+import getSimilarBusinesses from "@/lib/getSimillarBusines";
 import ListDetails from "@/components/listDetails/page";
 
 export default async function ListingsDetails({ params: { id } }) {

@@ -2,21 +2,22 @@
 import Image from "next/image";
 import cottagehome_icon from "@/public/images/cottagehome_icon.png";
 import Link from "next/link";
-import { Collapse } from "tw-elements";
-import { useEffect } from "react";
+// import { Collapse } from "tw-elements";
+// import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+
 const NavBar = () => {
   const pathname = usePathname();
-  useEffect(() => {
-    const init = async () => {
-      const { initTE } = await import("tw-elements");
-      initTE({ Collapse });
-    };
-    init();
-  }, []);
+  // useEffect(() => {
+  //   const init = async () => {
+  //     const { initTE } = await import("tw-elements");
+  //     initTE({ Collapse });
+  //   };
+  //   init();
+  // }, []);
+
   return (
     <>
-      {/* <!-- Main navigation container --> */}
       <nav
         className="relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
         data-te-navbar-ref
@@ -34,7 +35,6 @@ const NavBar = () => {
               </a>
             </div>
           </Link>
-          {/* <!-- Hamburger button for mobile view --> */}
           <button
             className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0  lg:hidden"
             type="button"
@@ -44,7 +44,6 @@ const NavBar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {/* <!-- Hamburger icon --> */}
             <span className="[&>svg]:w-7">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,19 +59,15 @@ const NavBar = () => {
               </svg>
             </span>
           </button>
-
-          {/* <!-- Collapsible navbar container --> */}
           <div
             className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
             id="navbarSupportedContent3"
             data-te-collapse-item
           >
-            {/* <!-- Left links --> */}
             <ul
               className="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
               data-te-navbar-nav-ref
             >
-              {/* <!-- Home link --> */}
               <Link
                 className={`link ${
                   pathname === "/"
@@ -83,7 +78,6 @@ const NavBar = () => {
               >
                 Home
               </Link>
-              {/* <!-- Listing link --> */}
               <Link
                 className={`link ${
                   pathname === "/listing"
@@ -94,7 +88,6 @@ const NavBar = () => {
               >
                 Listing
               </Link>
-              {/* <!-- Posting link --> */}
               <Link
                 className={`link ${
                   pathname === "/posting"
@@ -105,7 +98,6 @@ const NavBar = () => {
               >
                 Posting
               </Link>
-              {/* <!-- Buy&Sell link --> */}
               <Link
                 className={`link ${
                   pathname === ""

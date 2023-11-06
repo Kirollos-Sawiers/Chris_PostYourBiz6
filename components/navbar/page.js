@@ -2,23 +2,23 @@
 import Image from "next/image";
 import cottagehome_icon from "@/public/images/cottagehome_icon.png";
 import Link from "next/link";
-// import { Collapse } from "tw-elements";
+import { Collapse } from "tw-elements";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 const NavBar = () => {
   const pathname = usePathname();
-  // useEffect(() => {
-  //   const init = async () => {
-  //     const { initTE } = await import("tw-elements");
-  //     initTE({ Collapse });
-  //   };
-  //   init();
-  // }, []);
+  useEffect(() => {
+    const init = async () => {
+      const { initTE } = await import("tw-elements");
+      initTE({ Collapse });
+    };
+    init();
+  }, []);
   return (
     <>
       {/* <!-- Main navigation container --> */}
       <nav
-        className="relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
+        className="relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
         data-te-navbar-ref
       >
         <div class="flex w-full flex-wrap items-center justify-between px-3">
@@ -29,17 +29,14 @@ const NavBar = () => {
                 src={cottagehome_icon}
                 alt="Home page header"
               />
-              <a
-                className=" pr-5 leading-3 text-3xl text-blue-500 dark:text-neutral-200"
-                href="#"
-              >
+              <a className=" pr-5 leading-3 text-3xl text-blue-500" href="#">
                 POSTYOURBIZ
               </a>
             </div>
           </Link>
           {/* <!-- Hamburger button for mobile view --> */}
           <button
-            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0  lg:hidden"
             type="button"
             data-te-collapse-init
             data-te-target="#navbarSupportedContent3"
@@ -79,7 +76,7 @@ const NavBar = () => {
               <Link
                 className={`link ${
                   pathname === "/"
-                    ? "active disabled:text-black/30 [&.active]:text-white [&.active]:bg-blue-500 dark:[&.active]:text-neutral-400 rounded text-2xl px-3"
+                    ? "active disabled:text-black/30 [&.active]:text-white [&.active]:bg-blue-500 rounded text-2xl px-3"
                     : " text-2xl text-black px-3"
                 }`}
                 href="/"
@@ -90,7 +87,7 @@ const NavBar = () => {
               <Link
                 className={`link ${
                   pathname === "/listing"
-                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 dark:[&.active]:text-neutral-400 rounded text-2xl"
+                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 rounded text-2xl"
                     : " text-2xl text-black px-3"
                 }`}
                 href="/listing"
@@ -101,7 +98,7 @@ const NavBar = () => {
               <Link
                 className={`link ${
                   pathname === "/posting"
-                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 dark:[&.active]:text-neutral-400 rounded text-2xl"
+                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 rounded text-2xl"
                     : " text-2xl text-black px-3"
                 }`}
                 href="/posting"
@@ -112,7 +109,7 @@ const NavBar = () => {
               <Link
                 className={`link ${
                   pathname === ""
-                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 dark:[&.active]:text-neutral-400 rounded text-2xl"
+                    ? "active disabled:text-black/30 px-3 [&.active]:text-white [&.active]:bg-blue-500 rounded text-2xl"
                     : " text-2xl text-black px-3"
                 }`}
                 href=""
@@ -120,12 +117,12 @@ const NavBar = () => {
                 Buy&Sell
               </Link>
             </ul>
-            <span className="flex ml-2 text-neutral-500 dark:text-neutral-200">
+            <span className="flex ml-2 text-neutral-500">
               <Link href="/login">
-                <p className="mr-5 text-grey-600 text-2xl">Sign in</p>
+                <p className="mr-5 text-grey-600 text-3xl">Sign in</p>
               </Link>
               <Link href="/signup">
-                <p className="mr-5 text-grey-600 text-2xl">Sign up</p>
+                <p className="mr-5 text-grey-600 text-3xl">Sign up</p>
               </Link>
             </span>
           </div>

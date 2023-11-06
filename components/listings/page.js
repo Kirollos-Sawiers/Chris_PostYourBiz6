@@ -12,7 +12,6 @@ import Sidebar from "../../components/sideBar/page";
 import { useSelector } from "react-redux";
 
 export default function ListView({ listings }) {
-  // console.log(listings);
   const { flag, filterResult } = useSelector((state) => state.filter);
 
   const data = flag ? filterResult : listings;

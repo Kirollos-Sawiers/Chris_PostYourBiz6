@@ -33,7 +33,7 @@ export default function Footer() {
           alt="Home page header"
         />
         <a
-          className=" ml-1 font-semibold leading-3 text-3xl text-indigo-950 dark:text-neutral-200"
+          className=" ml-1 font-semibold leading-3 text-3xl text-indigo-950"
           href="#"
         >
           POSTYOURBIZ

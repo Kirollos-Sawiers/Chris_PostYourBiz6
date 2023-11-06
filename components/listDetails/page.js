@@ -2,7 +2,6 @@
 import NavBar from "../navbar/page";
 import Footer from "../footer/page";
 import Image from "next/image";
-import grid from "@/public/images/grid.jpg";
 import mapdetail from "@/public/images/mapdetail.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
@@ -10,17 +9,18 @@ import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
-// import { Carousel } from "tw-elements";
+import { Carousel } from "tw-elements";
 import Link from "next/link";
+import Sidebar from "../../components/sideBar/page";
+
 export default function ListDetails({ listDetails, similarData }) {
-  // useEffect(() => {
-  //   const init = async () => {
-  //     const { initTE } = await import("tw-elements");
-  //     initTE({ Carousel });
-  //   };
-  //   init();
-  // }, []);
-  console.log(similarData.data);
+  useEffect(() => {
+    const init = async () => {
+      const { initTE } = await import("tw-elements");
+      initTE({ Carousel });
+    };
+    init();
+  }, []);
   const similarBusiness = similarData.data;
   const Card = () => {
     return (
@@ -92,76 +92,7 @@ export default function ListDetails({ listDetails, similarData }) {
     <>
       <NavBar />
       <div className="grid grid-cols-4 gap-5 px-10 my-14">
-        <div className="pr-16">
-          <p className="text-4xl mb-5 text-black">Filters</p>
-          <div>
-            <label
-              htmlFor="selectCategory"
-              className="block text-2xl mb-1 text-black"
-            >
-              Category
-            </label>
-            <select
-              class="form-select w-full h-10 ring-1 ring-gray-400 rounded-xl text-2xl mb-3"
-              id="selectCategory"
-            >
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <label
-              htmlFor="selectState"
-              className="block text-2xl mb-1 text-black"
-            >
-              State
-            </label>
-            <select
-              class="form-select w-full h-10 ring-1 ring-gray-400 rounded-xl text-2xl mb-3 "
-              id="selectState"
-            >
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <label
-              htmlFor="selectCity"
-              className="block text-2xl mb-1 text-black"
-            >
-              City
-            </label>
-            <select
-              class="form-select w-full h-10 ring-1 ring-gray-400 rounded-xl text-2xl mb-3 "
-              id="selectCity"
-            >
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <label
-              htmlFor="selectDistance"
-              className="block text-2xl mb-1 text-black"
-            >
-              Distance from Zip Code
-            </label>
-            <select
-              class="form-select w-full h-10 ring-1 ring-gray-400 rounded-xl text-2xl mb-3 "
-              id="selectDistance"
-            >
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <div className="flex justify-center m-5 ">
-              <button className=" w-3/4 h-10 bg-blue-500 text-white text-2xl rounded tracking-widest">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
+        <Sidebar />
         <div className="col-span-3">
           <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold pt-3">
             <p>{listDetails.data.name}</p>

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import Sidebar from "../../components/sideBar/page";
+import Sidebar from "../filter/page";
 import { Galleria } from "primereact/galleria";
 
 export default function ListDetails({ listDetails, similarData }) {

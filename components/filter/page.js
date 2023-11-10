@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { filterBusinesses } from "@/redux/features/filterAction";
 
-export default function Sidebar() {
+export default function Filter() {
   const [selectedState, setSelectedState] = useState();
   const router = useRouter();
   const dispatch = useDispatch();

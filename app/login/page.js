@@ -7,7 +7,7 @@ export default function Login() {
     <>
       <div className="flex justify-around align-middle mt-28">
         <div className="mt-28 m-28">
-          <div className="flex justify-center align-middle  mb-14">
+          <div className="hidden max-769px:hidden lg:flex lg:justify-center lg:align-middle lg:mb-14">
             <Image className="w-14 h-14" src={blackHomeIcon} alt="Icon" />
             <p className="text-6xl text-indigo-950 ml-2 mt-2">POSTYOURBIZ</p>
           </div>

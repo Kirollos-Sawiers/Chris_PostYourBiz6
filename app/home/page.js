@@ -23,7 +23,6 @@ export default function Home() {
   const [selectedState, setSelectedState] = useState();
   const router = useRouter();
   const dispatch = useDispatch();
-  console.log({ selectedState });
   const states = [
     { label: "All", value: "ALL" },
     { label: "Alabama", value: "AL" },
@@ -107,14 +106,15 @@ export default function Home() {
         <div>
           <NavBar />
         </div>
-        <div className="flex justify-center px-12 my-3 rounded-lg bg-cover bg-no-repeat pt-12">
+        <div className="flex justify-center w-full h-screen rounded-lg pt-12">
           <div className="relative w-full">
-            <div className="relative w-full">
-              <Image className="w-full" src={heading} alt="Home page header" />
+            <div className=" absolute w-full h-full top-20 z-0">
+              <div className="flex justify-center">
+                <Image className="" src={heading} alt="Home page header" />
+              </div>
             </div>
-            <div className="w-full absolute bottom-52 rounded-lg">
-              <div className="w-full flex justify-center rounded-lg">
-                {/* <!--Select large--> */}
+            <div className="absolute left-1/4 top-1/4 rounded-lg">
+              <div className="rounded-lg">
                 <select
                   data-te-select-init
                   data-te-select-size="lg"
@@ -192,7 +192,7 @@ export default function Home() {
           </div>
         </div>
         {/* Start Card Section */}
-        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
           <p>Top Restaurants In Your Area</p>
         </div>
         <div className="flex justify-between align-middle">
@@ -338,14 +338,14 @@ export default function Home() {
         </div>
         {/* End Card Section */}
         {/* Start Card Section */}
-        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
           <p>Top Spa’s In Your Area</p>
         </div>
         <div className="flex justify-between align-middle">
-          <p className="text-2xl leading-10 text-lead-500 font-medium px-12">
+          <p className="text-2xl leading-10 text-lead-500 font-medium">
             1500 Listings
           </p>
-          <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+          <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
             VIEW ALL &gt;&gt;
           </p>
         </div>

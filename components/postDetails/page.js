@@ -10,7 +10,7 @@ import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { Galleria } from "primereact/galleria";
-import Sidebar from "../../components/sideBar/page";
+import Sidebar from "../filter/page";
 
 export default function PostDetails({ postDetails }) {
   const responsiveOptions = [

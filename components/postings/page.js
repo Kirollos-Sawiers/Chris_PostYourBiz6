@@ -9,6 +9,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Filter from "../filter/page";
+import card2 from "@/public/images/card2.jpg";
 
 export default function ListViewPostings({ postings }) {
   // console.log(postings);
@@ -26,7 +27,7 @@ export default function ListViewPostings({ postings }) {
                       width={300}
                       height={300}
                       alt="card img"
-                      src={post.business.logo}
+                      src={post.images[0] || card2}
                     />
                   </div>
                   <div className="col-span-2 pt-3 px-4">

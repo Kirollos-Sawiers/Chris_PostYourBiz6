@@ -106,7 +106,7 @@ export default function Home() {
         <div>
           <NavBar />
         </div>
-        <div className="flex justify-center w-full h-screen rounded-lg pt-12">
+        <div className="hidden lg:flex lg:justify-center lg:w-full lg:h-screen lg:rounded-lg lg:pt-12 lg:px-12">
           <div className="relative w-full">
             <div className=" absolute w-full h-full top-20 z-0">
               <div className="flex justify-center">
@@ -168,459 +168,469 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center align-middle text-5xl leading-10 tracking-widest text-black py-2">
-          <p>Explore America to find best Spa’s, Salons & Restaurants. </p>
-        </div>
-        <div className="flex justify-center px-12">
-          <Image
-            className="w-96 m-4"
-            style={{ height: "450px" }}
-            src={gallery1}
-            alt="Home page header"
-          />
-          <div>
+        <div className="px-6 lg:px-12">
+          <div className="flex justify-center align-middle text-5xl leading-10 tracking-widest text-black py-2">
+            <p>Explore America to find best Spa’s, Salons & Restaurants. </p>
+          </div>
+          <div className="flex justify-center px-12">
             <Image
-              className="w-96 h-36 pb-5 m-4"
-              src={gallery2}
+              className="w-96 m-4"
+              style={{ height: "450px" }}
+              src={gallery1}
               alt="Home page header"
             />
-            <Image
-              className="w-96 h-72 m-4"
-              src={gallery3}
-              alt="Home page header"
-            />
-          </div>
-        </div>
-        {/* Start Card Section */}
-        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
-          <p>Top Restaurants In Your Area</p>
-        </div>
-        <div className="flex justify-between align-middle">
-          <p className="text-2xl leading-10 text-lead-500 font-medium px-12">
-            1500 Listings
-          </p>
-          <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
-            VIEW ALL &gt;&gt;
-          </p>
-        </div>
-
-        <div className="px-24 relative">
-          <div className="flex items-center overflow-x-auto">
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card1} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span className="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card1} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card1} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card1} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <Image
+                className="w-96 h-36 pb-5 m-4"
+                src={gallery2}
+                alt="Home page header"
+              />
+              <Image
+                className="w-96 h-72 m-4"
+                src={gallery3}
+                alt="Home page header"
+              />
             </div>
           </div>
-        </div>
-        {/* End Card Section */}
-        {/* Start Card Section */}
-        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
-          <p>Top Spa’s In Your Area</p>
-        </div>
-        <div className="flex justify-between align-middle">
-          <p className="text-2xl leading-10 text-lead-500 font-medium">
-            1500 Listings
-          </p>
-          <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
-            VIEW ALL &gt;&gt;
-          </p>
-        </div>
+          {/* Start Card Section */}
+          <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
+            <p>Top Restaurants In Your Area</p>
+          </div>
+          <div className="flex justify-between align-middle">
+            <p className="text-2xl leading-10 text-lead-500 font-medium px-12">
+              1500 Listings
+            </p>
+            <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+              VIEW ALL &gt;&gt;
+            </p>
+          </div>
 
-        <div className="px-24 relative">
-          <div className="flex items-center overflow-x-auto">
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card2} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Tranquil Times</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+          <div className="px-24 relative">
+            <div className="flex items-center overflow-x-auto">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card1} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card2} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Tranquil Times</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span className="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card2} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Tranquil Times</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card1} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card2} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Tranquil Times</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card1} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card1} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Pie and Thighs</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* End Card Section */}
-        {/* Start Card Section */}
-        <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
-          <p>Top salons In Your Area</p>
-        </div>
-        <div className="flex justify-between align-middle">
-          <p className="text-2xl leading-10 text-lead-500 font-medium px-12">
-            1500 Listings
-          </p>
-          <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
-            VIEW ALL &gt;&gt;
-          </p>
-        </div>
+          {/* End Card Section */}
+          {/* Start Card Section */}
+          <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
+            <p>Top Spa’s In Your Area</p>
+          </div>
+          <div className="flex justify-between align-middle">
+            <p className="text-2xl leading-10 text-lead-500 font-medium">
+              1500 Listings
+            </p>
+            <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold py-3">
+              VIEW ALL &gt;&gt;
+            </p>
+          </div>
 
-        <div className="px-24 relative">
-          <div className="flex items-center overflow-x-auto">
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card3} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Dapper & Divine</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+          <div className="px-24 relative">
+            <div className="flex items-center overflow-x-auto">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card2} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Tranquil Times</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card2} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Tranquil Times</h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card2} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Tranquil Times</h2>
+                      <FontAwesomeIcon
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
+                      />
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card2} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">Tranquil Times</h2>
+                      <FontAwesomeIcon
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
+                      />
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card3} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Dapper & Divine</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+          </div>
+          {/* End Card Section */}
+          {/* Start Card Section */}
+          <div className="flex justify-start align-middle text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+            <p>Top salons In Your Area</p>
+          </div>
+          <div className="flex justify-between align-middle">
+            <p className="text-2xl leading-10 text-lead-500 font-medium px-12">
+              1500 Listings
+            </p>
+            <p className="text-4xl leading-10 tracking-widest text-blue-500 font-semibold px-12 py-3">
+              VIEW ALL &gt;&gt;
+            </p>
+          </div>
+
+          <div className="px-24 relative">
+            <div className="flex items-center overflow-x-auto">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card3} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">
+                        Dapper & Divine
+                      </h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card3} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Dapper & Divine</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
-                    </div>
-                    <div class="flex items-center text-gray-400">
-                      <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
-                      />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-72 h-80 bg-white rounded-lg mx-2">
-              <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
-                <Image className="w-full" src={card3} alt="card img" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-2xl font-semibold">Dapper & Divine</h2>
-                    <FontAwesomeIcon
-                      className="w-5 h-5 text-lead-500 mb-3"
-                      icon={faThumbsUp}
-                    />
-                  </div>
-                  <div class="flex justify-around align-baseline h-24 mt-2">
-                    <div class="flex items-center text-gray-400">
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card3} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">
+                        Dapper & Divine
+                      </h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">
-                        (605) 716-6600
-                      </span>
                     </div>
-                    <div class="flex items-center text-gray-400">
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card3} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">
+                        Dapper & Divine
+                      </h2>
                       <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faLocationDot}
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
                       />
-                      <span class="text-lg text-black ml-2">Ontario</span>
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image className="w-full" src={card3} alt="card img" />
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h2 className="text-2xl font-semibold">
+                        Dapper & Divine
+                      </h2>
+                      <FontAwesomeIcon
+                        className="w-5 h-5 text-lead-500 mb-3"
+                        icon={faThumbsUp}
+                      />
+                    </div>
+                    <div class="flex justify-around align-baseline h-24 mt-2">
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faAddressBook}
+                        />
+                        <span class="text-lg text-black ml-2">
+                          (605) 716-6600
+                        </span>
+                      </div>
+                      <div class="flex items-center text-gray-400">
+                        <FontAwesomeIcon
+                          className="w-4 h-4 text-blue-500"
+                          icon={faLocationDot}
+                        />
+                        <span class="text-lg text-black ml-2">Ontario</span>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -86,7 +86,7 @@ export default function Filter() {
   };
   return (
     <>
-      <div className="pr-16">
+      <div className="px-12">
         <p className="text-4xl mb-5 text-black">Filters</p>
         <div>
           <label

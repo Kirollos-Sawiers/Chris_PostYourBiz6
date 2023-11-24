@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import NavBar from "../../components/navbar/page";
 import Footer from "../../components/footer/page";
 import Image from "next/image";
@@ -10,77 +11,37 @@ import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Filter from "../filter/page";
 import card2 from "@/public/images/card2.jpg";
+import GalleryCard from "../galleryCard/page";
+import ListCard from "../listCard/page";
 
 export default function ListViewPostings({ postings }) {
-  // console.log(postings);
-  const Card = () => {
-    return (
-      <>
-        {postings.data.map((post) => {
-          return (
-            <>
-              <Link href={`/posting/${post.id}`}>
-                <div className="ring-1 ring-gray-400 rounded-xl m-5 grid grid-cols-3">
-                  <div>
-                    <Image
-                      className="rounded-l-xl w-full h-full"
-                      width={300}
-                      height={300}
-                      alt="card img"
-                      src={post.images[0] || card2}
-                    />
-                  </div>
-                  <div className="col-span-2 pt-3 px-4">
-                    <div className="flex items-center justify-between">
-                      <h2 className="text-3xl font-bold">
-                        {post.business.name}
-                      </h2>
-                      <FontAwesomeIcon
-                        className="w-5 h-5 text-lead-500 mb-3"
-                        icon={faThumbsUp}
-                      />
-                    </div>
-                    <div className="mb-5">
-                      <p className="text-xl leading-5">{post.content}</p>
-                    </div>
-                    <div class="flex justify-around align-end mt-2">
-                      <div class="flex items-center text-gray-400">
-                        {/* <FontAwesomeIcon
-                        className="w-4 h-4 text-blue-500"
-                        icon={faAddressBook}
-                      />
-                      <span class="text-lg text-gray-700 ml-1 mt-1">
-                        {post.phone_number}
-                      </span> */}
-                      </div>
-                      <div class="flex items-center text-gray-400">
-                        {/* <FontAwesomeIcon
-                          className="w-4 h-4 text-blue-500"
-                          icon={faLocationDot}
-                        />
-                        <span class="text-lg text-gray-700 ml-1 mt-1">
-                          {post.state}
-                        </span> */}
-                      </div>
-                      <div class="flex items-end text-gray-400">
-                        {/* <FontAwesomeIcon
-                          className="w-4 h-4 text-blue-500"
-                          icon={faDollarSign}
-                        /> */}
-                        <span class="text-lg text-gray-700 ml-1 mt-1">
-                          {post.postTime}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </>
-          );
-        })}
-      </>
-    );
+  const [view, setView] = useState("listView");
+  const toggleView = () => {
+    if (view === "listView") {
+      return (
+        <>
+          <div className="lg:grid lg:grid-cols-1">
+            <ListCard Info={postings} />;
+          </div>
+        </>
+      );
+    } else if (view === "galleryView") {
+      return (
+        <>
+          <div className="lg:grid lg:grid-cols-3">
+            <GalleryCard Info={postings} />;
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <h1>Map View</h1>
+        </>
+      );
+    }
   };
+
   return (
     <>
       <NavBar />
@@ -99,7 +60,12 @@ export default function ListViewPostings({ postings }) {
 
             <div className="text-3xl col-span-2">
               <div className="flex justify-around">
-                <div className="flex">
+                <button
+                  className="flex"
+                  onClick={() => {
+                    setView("listView");
+                  }}
+                >
                   <span>
                     <svg
                       className="w-5 h-5 inline mr-3 mb-1 text-blue-500"
@@ -113,8 +79,12 @@ export default function ListViewPostings({ postings }) {
                   <span className="hidden lg:block text-blue-500">
                     List View
                   </span>
-                </div>
-                {/* <button>
+                </button>
+                <button
+                  onClick={() => {
+                    setView("galleryView");
+                  }}
+                >
                   <svg
                     className="w-5 h-5 inline mr-3 mb-1"
                     // style={{ fill: "rgb(59 130 246)" }}
@@ -124,9 +94,14 @@ export default function ListViewPostings({ postings }) {
                   >
                     <path d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z" />
                   </svg>
-                  Grid View
-                </button> */}
-                <div className="flex">
+                  Gallery
+                </button>
+                <button
+                  className="flex"
+                  onClick={() => {
+                    setView("mapView");
+                  }}
+                >
                   <span>
                     <svg
                       className="w-5 h-5 inline mr-3 mb-1"
@@ -138,17 +113,17 @@ export default function ListViewPostings({ postings }) {
                     </svg>
                   </span>
                   <span className="hidden lg:block">Map View</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
           {/* Start of list view */}
-          <div className="lg:grid lg:grid-cols-2">
-            {/* <div className="ring ring-gray-400 rounded-xl m-5">
+          {/* <div className="lg:grid lg:grid-cols-2"> */}
+          {/* <div className="ring ring-gray-400 rounded-xl m-5">
                 <Image className="rounded-l-xl" src={list} alt="card img" />
               </div> */}
-            {Card()}
-          </div>
+          {toggleView()}
+          {/* </div> */}
 
           {/* End of list view */}
         </div>

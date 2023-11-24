@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import NavBar from "../../components/navbar/page";
 import Footer from "../../components/footer/page";
 import Image from "next/image";
@@ -15,8 +16,83 @@ export default function ListView({ listings }) {
   const { flag, filterResult } = useSelector((state) => state.filter);
 
   const data = flag ? filterResult : listings;
-
-  const Card = () => {
+  const [view, setView] = useState("listView");
+  const toggleView = () => {
+    if (view === "listView") {
+      return (
+        <>
+          <div className="lg:grid lg:grid-cols-1">{listCard()}</div>
+        </>
+      );
+    } else if (view === "galleryView") {
+      return (
+        <>
+          <div className="lg:grid lg:grid-cols-3">{galleryCard()}</div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <h1>Map View</h1>
+        </>
+      );
+    }
+  };
+  const galleryCard = () => {
+    return (
+      <>
+        {data.map((list) => {
+          return (
+            <>
+              <Link href={`/listing/${list.id}`}>
+                <div className="w-72 h-80 bg-white rounded-lg mx-2">
+                  <div className="w-72 h-72 bg-white rounded-lg shadow-md overflow-hidden">
+                    <Image
+                      className="w-full"
+                      width={288}
+                      height={320}
+                      src={list.logo}
+                      alt="card img"
+                    />
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <h2 className="text-2xl font-semibold">
+                          Pie and Thighs
+                        </h2>
+                        {/* <FontAwesomeIcon
+                    className="w-5 h-5 text-lead-500 mb-3"
+                    icon={faThumbsUp}
+                  /> */}
+                      </div>
+                      <div class="flex justify-around align-baseline h-24 mt-2">
+                        <div class="flex items-center text-gray-400">
+                          {/* <FontAwesomeIcon
+                      className="w-4 h-4 text-blue-500"
+                      icon={faAddressBook}
+                    /> */}
+                          <span class="text-lg text-black ml-2">
+                            (605) 716-6600
+                          </span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                          {/* <FontAwesomeIcon
+                      className="w-4 h-4 text-blue-500"
+                      icon={faLocationDot}
+                    /> */}
+                          <span class="text-lg text-black ml-2">Ontario</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </>
+          );
+        })}
+      </>
+    );
+  };
+  const listCard = () => {
     return (
       <>
         {data.map((list) => {
@@ -102,7 +178,12 @@ export default function ListView({ listings }) {
 
             <div className="text-3xl col-span-2">
               <div className="flex justify-around">
-                <div className="flex">
+                <button
+                  className="flex"
+                  onClick={() => {
+                    setView("listView");
+                  }}
+                >
                   <span>
                     <svg
                       className="w-5 h-5 inline mr-3 mb-1 text-blue-500"
@@ -116,8 +197,12 @@ export default function ListView({ listings }) {
                   <span className="hidden lg:block text-blue-500">
                     List View
                   </span>
-                </div>
-                {/* <button>
+                </button>
+                <button
+                  onClick={() => {
+                    setView("galleryView");
+                  }}
+                >
                   <svg
                     className="w-5 h-5 inline mr-3 mb-1"
                     // style={{ fill: "rgb(59 130 246)" }}
@@ -127,9 +212,14 @@ export default function ListView({ listings }) {
                   >
                     <path d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z" />
                   </svg>
-                  Grid View
-                </button> */}
-                <div className="flex">
+                  Gallery
+                </button>
+                <div
+                  className="flex"
+                  onClick={() => {
+                    setView("mapView");
+                  }}
+                >
                   <span>
                     <svg
                       className="w-5 h-5 inline mr-3 mb-1"
@@ -146,7 +236,9 @@ export default function ListView({ listings }) {
             </div>
           </div>
           {/* Start of list view */}
-          <div className="lg:grid lg:grid-cols-2">{Card()}</div>
+          {/* <div className="lg:grid lg:grid-cols-2">{Card()}</div> */}
+          {toggleView()}
+
           {/* End of list view */}
         </div>
       </div>
